@@ -21,7 +21,7 @@ public class Login extends HttpServlet{
 		
 		String url="jdbc:mysql://localhost:3306/student_details";
 		String uname="root";
-		String pass="18AnkitKumar";
+		String pass="";
 		
 		response.setContentType("text/html");
 		
@@ -31,7 +31,7 @@ public class Login extends HttpServlet{
 		
 		String query="select * from product where p_id=?";
 		out.print("<h1>Displaying the Product Details...</h1>");
-		out.print("<table border='1'><tr><th>ID</th><th>Name</th><th>Location</th></tr>");
+		out.print("<table border='1'><tr><th>Product Id</th><th>Product Name</th><th>Product Price</th></tr>");
 		
 		try {
 	      Class.forName("com.mysql.cj.jdbc.Driver");
